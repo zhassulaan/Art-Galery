@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
 @import './header.scss';
 @import './home.scss';
+@import './favourite.scss';
 
 :root {
   --clr-white: #FFF;

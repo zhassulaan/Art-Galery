@@ -1,0 +1,22 @@
+.favourite {
+	&-title {
+		position: relative;
+		text-align: center;
+		padding-top: 110px;
+		&::before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 16px;
+			background-color: var(--clr-grey);
+		}
+	}
+	&-body {
+		display: flex;
+		gap: 1.5625vw;
+		flex-wrap: wrap;
+		margin: 101px 11.454375% 167px;
+	}
+}
