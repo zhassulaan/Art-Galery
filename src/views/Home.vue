@@ -6,7 +6,7 @@
     </div>
     <div class='home-body'>
       <div class='home-body__item' v-for='item in images' :key='item.id'>
-        <img :src='item.image' alt='portrait' />
+        <img :src='item.image' :alt='item.name' />
       </div>
     </div>
   </main>
