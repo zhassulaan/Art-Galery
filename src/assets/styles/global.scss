@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+@import './header.scss';
+
+:root {
+  --clr-white: #FFF;
+  --clr-black: #000;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+  display: block;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-weight: 400;
+}
