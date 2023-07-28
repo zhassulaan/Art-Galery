@@ -36,6 +36,19 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 72px;
+  font-weight: 700;
+}
+
 p {
   font-weight: 400;
+}
+
+.home-layout .container {
+  padding-top: 148px;
+}
+
+.default-layout .container {
+  padding-top: 81px;
 }

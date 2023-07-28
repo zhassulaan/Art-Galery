@@ -1,5 +1,5 @@
 <template>
-  <div>
-    <h1>Favourite Page</h1>
-  </div>
+  <main class='container'>
+    <h1>Избранное</h1>
+  </main>
 </template>
