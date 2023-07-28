@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
 @import './header.scss';
 @import './home.scss';
+@import './detail.scss';
 @import './favourite.scss';
 
 :root {
   --clr-white: #FFF;
   --clr-black: #000;
   --clr-grey: #C4C4C4;
+  --clr-grey-2: #F2F2F2;
   --clr-blue: #325BEC;
+  --clr-yellow: #FFF200;
 }
 
 *,
@@ -40,19 +43,23 @@ a {
   text-decoration: none;
 }
 
+img {
+  object-fit: cover;
+}
+
 h1 {
   font-size: 72px;
   font-weight: 700;
 }
 
-p {
+h6, p {
   font-weight: 400;
 }
 
 .home-layout .container {
-  padding-top: 148px;
+  margin-top: 148px;
 }
 
 .default-layout .container {
-  padding-top: 81px;
+  margin-top: 81px;
 }
