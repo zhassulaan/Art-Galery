@@ -5,6 +5,7 @@
 	justify-content: space-between;
 	width: 100%;
 	background-color: var(--clr-black);
+	z-index: 5;
 	&-logo {
 		cursor: pointer;
 	}

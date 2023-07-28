@@ -1,15 +1,21 @@
 <template>
 	<header class='header'>
-		<img src='@/assets/icons/logo.svg' class='header-logo' alt='logo' />
+		<icon-logo class='header-logo' />
 		<ul class='header-menu'>
 			<li class='header-menu__item'>
-				<img src='@/assets/icons/search.svg' alt='search' />
+				<icon-search />
 				<p>Поиск</p>
 			</li>
 			<li class='header-menu__item'>
-				<img src='@/assets/icons/heart.svg' alt='heart' />
+				<icon-heart />
 				<p>Избранное</p>
 			</li>
 		</ul>
 	</header>
 </template>
+
+<script setup>
+import IconLogo from '../icons/Logo.vue';
+import IconSearch from '../icons/Search.vue';
+import IconHeart from '../icons/Heart.vue';
+</script>

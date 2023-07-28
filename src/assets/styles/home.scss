@@ -1,0 +1,42 @@
+.home {
+	&-hero {
+		position: relative;
+		background-image: url('../images/background.jpeg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 252px;
+		margin-bottom: 16px;
+		&__background,
+		.search {
+			position: absolute;
+		}
+		&__background {
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--clr-black);
+			opacity: .5;
+		}
+		.search {
+			left: 27.0833vw;
+			bottom: 91px;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -16px;
+			left: 0;
+			width: 100%;
+			height: 16px;
+			background-color: var(--clr-grey);
+		}
+	}
+	&-body {
+		display: flex;
+		gap: 1.5625vw;
+		flex-wrap: wrap;
+		margin: 114px 11.45833% 0;
+	}
+}
