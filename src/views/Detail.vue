@@ -64,7 +64,11 @@ function handleFavourite() {
 }
 function toggleMaximize() {
   isMaximized.value = !isMaximized.value;
-  document.body.classList.add('freeze');
+  if (isMaximized.value) {
+    document.body.classList.add('freeze');
+  } else {
+    document.body.classList.remove('freeze');
+  }
 }
 function checkImageDimensions(event) {
   const imageElement = event.target;
