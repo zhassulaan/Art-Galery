@@ -12,7 +12,7 @@ const routes = [
     ],
   },
   {
-    path: '/details/:id',
+    path: '/catalog/:id',
     component: DefaultLayout,
     children: [
       { path: '', component: () => import('../views/Detail.vue'), name: 'Detail' }

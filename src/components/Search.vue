@@ -33,10 +33,10 @@ function getValue() {
 		display: flex;
 		align-items: center;
 		gap: 10px;
-		width: 866px;
+		width: 46.145833%;
 		background-color: var(--clr-white);
 		border: 2px solid var(--clr-white);
-		padding: 19px 32px 19px 37px;
+		padding: 19px 1.666667vw 19px 1.927083vw;
 		&-input {
 			width: 100%;
 			height: 28px;
@@ -56,6 +56,18 @@ function getValue() {
 		}
 		&.active {
 			border: 2px solid var(--clr-blue);
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.search {
+			gap: 5px;
+			width: 89.095745%;
+			border: 1px solid var(--clr-white);
+			padding: 19px 6.914894vw 21px 6.648936vw;
+			&.active {
+				border: 1px solid var(--clr-blue);
+			}
 		}
 	}
 </style>

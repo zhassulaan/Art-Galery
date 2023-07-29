@@ -2,13 +2,14 @@
 @import './header.scss';
 @import './home.scss';
 @import './detail.scss';
-@import './favourite.scss';
+@import './favourites.scss';
 
 :root {
   --clr-white: #FFF;
   --clr-black: #000;
   --clr-grey: #C4C4C4;
   --clr-grey-2: #F2F2F2;
+  --clr-grey-3: #BDBDBD;
   --clr-blue: #325BEC;
   --clr-yellow: #FFF200;
 }
@@ -20,7 +21,7 @@
   margin: 0;
   padding: 0;
   transition: all;
-  transition-duration: 300ms;
+  transition-duration: 200ms;
 }
 
 html {
@@ -41,6 +42,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--clr-white);
 }
 
 img {
@@ -48,7 +50,6 @@ img {
 }
 
 h1 {
-  font-size: 72px;
   font-weight: 700;
 }
 
@@ -62,4 +63,11 @@ h6, p {
 
 .default-layout .container {
   margin-top: 81px;
+}
+
+@media screen and (max-width: 768px) {
+	.home-layout .container,
+	.default-layout .container {
+    margin-top: 80px;
+	}
 }
