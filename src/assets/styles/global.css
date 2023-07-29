@@ -37,6 +37,10 @@ body {
   margin: 0 auto;
 }
 
+.freeze {
+  overflow: hidden;
+}
+
 ul {
   list-style-type: none;
 }
@@ -56,6 +60,10 @@ h1 {
 
 h6, p {
   font-weight: 400;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 .home-layout .container {

@@ -17,20 +17,17 @@
 	width: 100%;
 	background-color: var(--clr-black);
 	z-index: 5;
-	&-logo {
-		cursor: pointer;
-	}
 	&-menu {
 		display: flex;
 		width: 100%;
+		height: 100%;
 		justify-content: flex-end;
 		gap: 38px;
 		&__item {
 			position: relative;
 			display: flex;
-			align-items: center;
+			height: max-content;
 			gap: 10px;
-			cursor: pointer;
 			&-text {
 				color: var(--clr-white);
 			}
@@ -47,6 +44,8 @@
 		}
 		.search {
 			width: 75%;
+			height: 80%;
+			margin-top: 8px;
 		}
 	}
 }
@@ -61,12 +60,16 @@
 			max-width: 185px;
 		}
 		&-menu__item {
+			padding-top: 57px;
 			&-text {
 				font-size: 18px;
 			}
 			&:first-child {
 				display: none;
 			}
+		}
+		.dropdown {
+			display: none;
 		}
 	}
 }
@@ -80,8 +83,11 @@
 			min-width: 112px;
 			max-width: 112px;
 		}
-		&-menu__item-text {
-			font-size: 20px;
+		&-menu__item {
+			padding-top: 28px;
+			&-text {
+				font-size: 20px;
+			}
 		}
 	}
 }

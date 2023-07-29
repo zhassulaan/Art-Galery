@@ -2,7 +2,7 @@
   <main class='favourites container'>
     <h1 class='favourites-title'>Избранное</h1>
     <div class='favourites-body'>
-      <Portrait class='home-body__item' :image='item' v-for='item in images' :key='item.id' />
+      <Portrait class='home-body__item' :portrait='item' v-for='item in portraits' :key='item.id' />
     </div>
   </main>
 </template>
@@ -10,5 +10,5 @@
 <script setup>
 import Portrait from '../components/Portrait.vue';
 
-let images = JSON.parse(localStorage.getItem('portrait'));
+let portraits = JSON.parse(localStorage.getItem('portrait'));
 </script>

@@ -8,23 +8,23 @@
 			v-model='searchInput'
 			@focus='isActive = true'
 			@blur='isActive = false'
+			@input="handleInput"
 		/>
-		<IconSearch class='search-button' />
+		<IconSearch v-if="searchInput === ''" class='search-button open' />
+		<span v-else class='search-button close' @click="searchInput = '', handleInput()"></span>
 	</div>
 </template>
 
 <script setup>
-import { ref, watch, defineProps, defineEmits } from 'vue';
+import { ref, defineEmits } from 'vue';
 import IconSearch from './icons/Search.vue';
 
+const emit = defineEmits(['input']);
 const isActive = ref(false);
-const searchInput = '';
+const searchInput = ref('');
 
-watch(searchInput, () => {
-	getValue();
-});
-function getValue() {
-	emit('input', searchInput);
+function handleInput() {
+  emit('input', searchInput.value);
 }
 </script>
 
@@ -52,7 +52,28 @@ function getValue() {
 			}
 		}
 		&-button {
-			fill: var(--clr-black);
+			&.open {
+				fill: var(--clr-black);
+			}
+			&.close {
+				position: relative;
+				width: 22px;
+				height: 22px;
+				&::before,
+				&::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 80%;
+					height: 2px;
+					background-color: var(--clr-black);
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+				&::after {
+					transform: translate(-50%, -50%) rotate(-45deg);
+				}
+			}
 		}
 		&.active {
 			border: 2px solid var(--clr-blue);

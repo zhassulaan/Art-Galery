@@ -15,7 +15,7 @@ import avatar5 from './assets/images/avatar5.jpeg';
 import avatar6 from './assets/images/avatar6.jpeg';
 import avatar7 from './assets/images/avatar7.jpeg';
 
-export const images = [
+export const portraits = [
 	{
 		id: 1,
 		name: 'Свет во тьме светит',
