@@ -12,6 +12,7 @@
   --clr-grey-3: #BDBDBD;
   --clr-blue: #325BEC;
   --clr-yellow: #FFF200;
+  --clr-red: #f13737;
 }
 
 *,
@@ -21,7 +22,7 @@
   margin: 0;
   padding: 0;
   transition: all;
-  transition-duration: 200ms;
+  transition-duration: 150ms;
 }
 
 html {

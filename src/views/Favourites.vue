@@ -9,5 +9,6 @@
 
 <script setup>
 import Portrait from '../components/Portrait.vue';
-import { images } from '../data';
+
+let images = JSON.parse(localStorage.getItem('portrait'));
 </script>
