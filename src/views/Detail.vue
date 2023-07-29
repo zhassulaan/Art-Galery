@@ -46,6 +46,9 @@ const saved = ref(data && data.find((item) => item.id === portrait.id));
 const isWidthLarger = ref(null);
 const isMaximized = ref(false);
 
+watch(saved, (newValue) => {
+  localStorage.setItem('portrait', JSON.stringify(data));
+});
 onMounted(() => {
   isMaximized.value = false;
 });
@@ -71,7 +74,4 @@ function checkImageDimensions(event) {
     isWidthLarger.value = false;
   }
 }
-watch(saved, (newValue) => {
-  localStorage.setItem('portrait', JSON.stringify(data));
-});
 </script>

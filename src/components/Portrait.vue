@@ -1,7 +1,7 @@
 <template>
-	<a :href='`/catalog/${ portrait.id }`' class='portrait'>
+	<router-link :to='`/catalog/${ portrait.id }`' class='portrait'>
 		<img :src='portrait.image' class='portrait-image' :alt='portrait.name' />
-	</a>
+	</router-link>
 </template>
 
 <script setup>

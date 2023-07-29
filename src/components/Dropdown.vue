@@ -1,6 +1,6 @@
 <template>
 	<div class='dropdown' :class="portraits.length === 0 ? 'null' : ((portraits.length === 2) ? 'double' : ((portraits.length === 1) ? 'single' : ''))">
-		<a :href='`/catalog/${ portrait.id }`' class='dropdown-item' v-for='portrait in portraits'>
+		<a :href='`/catalog/${ portrait.id }`' class='dropdown-item' v-for='portrait in portraits' @click='close()'>
 			<span class='dropdown-item__avatar'>
 				<img :src='portrait.avatar' class='image' :alt='portrait.artist' />
 			</span>

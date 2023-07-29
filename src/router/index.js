@@ -2,8 +2,6 @@ import { createRouter, createWebHistory } from 'vue-router';
 import DefaultLayout from '../layouts/DefaultLayout.vue';
 import HomeLayout from '../layouts/HomeLayout.vue';
 import Home from '../views/Home.vue';
-import Detail from '../views/Detail.vue';
-import Favourites from '../views/Favourites.vue';
 import { portraits } from '../data';
 
 const routes = [
@@ -24,7 +22,7 @@ const routes = [
     children: [
       {
         path: '',
-        component: Detail,
+        component: () => import('../views/Detail.vue'),
         name: 'Detail',
         beforeEnter: (to, from, next) => {
           const id = Number(to.params.id);
@@ -45,7 +43,7 @@ const routes = [
     children: [
       {
         path: '',
-        component: Favourites,
+        component: () => import('../views/Favourites.vue'),
         name: 'Favourites',
       }
     ],

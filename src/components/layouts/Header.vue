@@ -1,16 +1,18 @@
 <template>
 	<header class='header'>
-		<icon-logo class='header-logo btn ' @click='reloadPage()' />
+		<router-link to='/'>
+			<icon-logo class='header-logo btn' />
+		</router-link>
 		<div class='header-menu'>
 			<span class='header-menu__item btn' v-if='!search' @click='search = true'>
 				<icon-search class='header-menu__item-icon' />
 				<p class='header-menu__item-text'>Поиск</p>
 			</span>
 			<search v-else @input='handleSearch' />
-			<a href='/favourites' class='header-menu__item btn'>
+			<router-link to='/favourites' class='header-menu__item btn'>
 				<icon-heart class='header-menu__item-icon' />
 				<p class='header-menu__item-text'>Избранное</p>
-			</a>
+			</router-link>
 		</div>
 		<Dropdown v-if='search' :portraits='filteredImages' @close='search = false' />
 	</header>
@@ -43,8 +45,5 @@ const filteredImages = computed(() => {
 
 function handleSearch(value) {
   searchInput.value = value;
-}
-function reloadPage() {
-  window.location.reload();
 }
 </script>
